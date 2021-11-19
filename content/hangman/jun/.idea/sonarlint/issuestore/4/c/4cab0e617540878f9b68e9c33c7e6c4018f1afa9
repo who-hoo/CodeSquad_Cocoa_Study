@@ -1,0 +1,15 @@
+
+[
+java:S1854"9Remove this useless assignment to local variable "input".(°éñóøÿÿÿÿ8ŠË‰¡Ñ/
+Q
+java:S1854"6Remove this useless assignment to local variable "me".(éç¹éûÿÿÿÿ
+Q
+java:S1854"6Remove this useless assignment to local variable "id".(¬®ß§şÿÿÿÿ
+B
+java:S1481"'Remove this unused "id" local variable.(¬®ß§şÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Á‡û¾úÿÿÿÿ
+U	java:S106"9Replace this use of System.out or System.err by a logger.(òàî8Øôÿ Ñ/
+B
+java:S1481"'Remove this unused "me" local variable.(éç¹éûÿÿÿÿ
+L
+java:S1481"*Remove this unused "input" local variable.(°éñóøÿÿÿÿ8ŒË‰¡Ñ/
