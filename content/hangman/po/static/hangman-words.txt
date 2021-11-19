@@ -1,0 +1,4 @@
+macbook:Dan이 추천한 랩탑
+keyboard:요즘 하루 종일 만지는 것
+codesquad:교육기관
+github:코드 저장소
