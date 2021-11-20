@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7db495c6-b2c0-45b6-b935-b6dc9980f5ae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/images/message.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/hangman/jun/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/content/hangman/jun/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,16 +30,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/content" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/content/images" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/images" />
+      <recent name="$PROJECT_DIR$/content/image" />
+      <recent name="$PROJECT_DIR$/content/interface" />
+      <recent name="$PROJECT_DIR$/content/hangman/jun" />
       <recent name="$PROJECT_DIR$/content" />
-      <recent name="$PROJECT_DIR$/content/exception" />
-      <recent name="$PROJECT_DIR$/content/thread" />
-      <recent name="$PROJECT_DIR$/content/hangman" />
-      <recent name="$PROJECT_DIR$/content/thread/who" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -49,6 +51,8 @@
       <option name="presentableId" value="Default" />
       <updated>1637170892763</updated>
       <workItem from="1637170895584" duration="3402000" />
+      <workItem from="1637346054959" duration="504000" />
+      <workItem from="1637382816442" duration="1592000" />
     </task>
     <servers />
   </component>
