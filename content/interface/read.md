@@ -1,4 +1,4 @@
-# Interface
+# 추상계층
 
 interface 수업을 듣고 이를 학습한 저장소 입니다.
 <br/><br/><br/><br/><br/><br/><br/>
