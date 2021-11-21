@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7db495c6-b2c0-45b6-b935-b6dc9980f5ae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/atomic/AtomicCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/atomic/NormalCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/atomic/SyncroCount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/interface/jun/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/interface/jun/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/interface/read.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/interface/read.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/thread/jun/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/content/thread/jun/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/thread/jun/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/content/thread/jun/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/thread/jun/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/content/thread/jun/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/thread/jun/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/content/thread/jun/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/thread/jun/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/content/thread/jun/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/thread/jun/build/classes/java/main/com/example/thread/frokjuoin/example02/SumTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/content/thread/jun/build/classes/java/main/com/example/thread/frokjuoin/example02/SumTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/thread/jun/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/content/thread/jun/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/thread/jun/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/thread/jun/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +68,8 @@
       <workItem from="1637396780410" duration="340000" />
       <workItem from="1637397349179" duration="200000" />
       <workItem from="1637446398968" duration="4192000" />
+      <workItem from="1637465956034" duration="350000" />
+      <workItem from="1637466523722" duration="2930000" />
     </task>
     <servers />
   </component>
