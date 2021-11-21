@@ -9,7 +9,7 @@
 것이 좋습니다.
 <br/>
 
-![ex_screenshot](../images/message.png)
+![ex_screenshot](../../images/message.png)
 
 <br/><br/><br/><br/><br/><br/>
 
@@ -17,14 +17,14 @@
 아무런 오류가 발생하지 않습니다.
 <br/>
 
-![ex_screenshot](../images/lst.png)
+![ex_screenshot](../../images/lst.png)
 
 <br/><br/><br/><br/><br/><br/>
 
 이것이 가능했던 이유는 List도 사실 인터페이스이기 때문입니다.
 <br/>
 
-![ex_screenshot](../images/lstinterface.png)
+![ex_screenshot](../../images/lstinterface.png)
 
 <br/><br/><br/><br/><br/><br/>
 
@@ -33,16 +33,16 @@
 Vector을 상속하며 또한 Vetor는 List를 implement하고 있습니다.
 <br/>
 
-![ex_screenshot](../images/dependency-01.png)
+![ex_screenshot](../../images/dependency-01.png)
 
 <br/><br/><br/><br/><br/><br/>
 
 List의 구현체는 ArrayList와 LinkedList 뿐만 아니라 다 알기 힘들 정도로 많지만, 변하지 않는 List 인터페이스에 의존하게 되면 구현체가 바뀌더라도 크게 영향을 받지 않을 수 있습니다.
 <br/>
 
-![ex_screenshot](../images/lstimpl.png)
+![ex_screenshot](../../images/lstimpl.png)
 <br/><br/>
-![ex_screenshot](../images/lstImpl2.png)
+![ex_screenshot](../../images/lstImpl2.png)
 
 <br/><br/><br/><br/><br/><br/>
 
@@ -52,7 +52,7 @@ List의 구현체는 ArrayList와 LinkedList 뿐만 아니라 다 알기 힘들 
 되기 때문에 변경에 유연해지며 심지어 (부품처럼) 새로운 클래스로 갈아 끼워도 상관없습니다.
 <br/><br/>
 
-![ex_screenshot](../images/oop.png)
+![ex_screenshot](../../images/oop.png)
 
 <br/><br/><br/><br/><br/><br/>
 
@@ -63,7 +63,7 @@ List의 구현체는 ArrayList와 LinkedList 뿐만 아니라 다 알기 힘들 
 
 <br/>
 
-![ex_screenshot](../images/changes.png)
+![ex_screenshot](../../images/changes.png)
 
 <br/><br/><br/><br/><br/><br/>
 자바에서는 이런 변화의 연쇄를 끊기 위해 추상 클래스 또는 인터페이스를 사용합니다. 객체 인스턴스를 직접 만들면 구현 클래스에 의존해야 하지만, 인터페이스를 사용하게 되면 타입 "계층"을 만들어 완충작용을 할 수
@@ -71,7 +71,7 @@ List의 구현체는 ArrayList와 LinkedList 뿐만 아니라 다 알기 힘들 
 타입으로 뭉뚱그려 부를 수 있는 것입니다.
 <br/>
 
-![ex_screenshot](../images/abstract.png)
+![ex_screenshot](../../images/abstract.png)
 
 <br/><br/><br/><br/><br/><br/>
 이렇게 되면 변경 사항에 대한 직접적인 영향을 완충할 수 있습니다. 왼쪽 그림처럼 상위 클래스에서 구체적인 하위클래스를 지명하게 되면, 해당 클래스(구현체)를 변경할 때 부작용이 곧바로 상위 클래스로 전달됩니다.
@@ -79,13 +79,13 @@ List의 구현체는 ArrayList와 LinkedList 뿐만 아니라 다 알기 힘들 
 
 <br/><br/>
 
-![ex_screenshot](../images/types.png)
+![ex_screenshot](../../images/types.png)
 
 <br/><br/><br/><br/><br/><br/>
 
 변하지 않는 것에 의존하기 때문에 구현체의 로직을 필요할 때 언제라도 바꿀 수 있고, 이는 클라이언트(객체를 사용하는 측)에 전혀 영향을 미치지 않습니다. 따라서 이를 통해 변화에 유연한 코드를 작성할 수 있습니다.
 
-![ex_screenshot](../images/dontknow.png)
+![ex_screenshot](../../images/dontknow.png)
 
 <br/><br/><br/><br/><br/><br/>
 
@@ -94,13 +94,13 @@ List의 구현체는 ArrayList와 LinkedList 뿐만 아니라 다 알기 힘들 
 구현체의 적절한 자료구조를 선택해서 사용해야 할 필요는 있습니다.
 <br/>
 
-![ex_screenshot](../images/packages.png)
+![ex_screenshot](../../images/packages.png)
 
 <br/><br/><br/><br/>
 
 이를 List예제에 적용해보면 저수준의 Stack이 고수준 List에 의존하고 있기 때문에 Stack을 List로 바꾸어도 아무런 오류가 발생하지 않습니다.
 <br/><br/>
-![ex_screenshot](../images/dependency-01.png)
+![ex_screenshot](../../images/dependency-01.png)
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ## 3. 단점
@@ -114,7 +114,7 @@ List의 구현체는 ArrayList와 LinkedList 뿐만 아니라 다 알기 힘들 
 
 <br/>
 
-![ex_screenshot](../images/danzum.png)
+![ex_screenshot](../../images/danzum.png)
 
 * Shion TA의 조언을 받았는데, 배우는 과정에서는 FM대로 최대한 잘게 나누고 쪼개되는 것이 좋을 것 같다고 해서 이를 반영했습니다.
 

@@ -1,4 +1,4 @@
-# CodeSquad_Study
+# CodeSquad_Cocoa_Study
 
 코드스쿼드 코코아 새벽반
 <br/><br/>

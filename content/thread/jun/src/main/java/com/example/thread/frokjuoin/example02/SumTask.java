@@ -1,4 +1,4 @@
-package com.example.thread.frokjuoin;
+package com.example.thread.frokjuoin.example02;
 
 import java.util.concurrent.RecursiveTask;
 
@@ -10,7 +10,6 @@ public class SumTask extends RecursiveTask<Long> {
         this.to = to;
     }
 
-    @Override
     protected Long compute() {
         long size = to - from + 1;
 
@@ -23,9 +22,6 @@ public class SumTask extends RecursiveTask<Long> {
         SumTask right = new SumTask(half + 1, to);
 
         left.fork();
-        // System.out.println("======================================================");
-        // System.out.println("ForkThreadId");
-        // System.out.println(Thread.currentThread().getId());
         return right.compute() + left.join();
     }
 
