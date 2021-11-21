@@ -1,0 +1,19 @@
+
+k
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(„ú²Ÿıÿÿÿÿ
+R
+java:S1854"7Remove this useless assignment to local variable "lst".(„ú²Ÿıÿÿÿÿ
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Şıÿÿÿÿ
+C
+java:S1481"(Remove this unused "lst" local variable.(„ú²Ÿıÿÿÿÿ
+K
+java:S1610"5Convert the abstract class "Human" into an interface.(”èğ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(”­Ÿƒ
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(‚»»
+N	java:S106+"9Replace this use of System.out or System.err by a logger.(Ï£Â‘
+S	java:S1064"9Replace this use of System.out or System.err by a logger.(™½İâøÿÿÿÿ
+S	java:S106<"9Replace this use of System.out or System.err by a logger.(¿õÔÕúÿÿÿÿ
+‡
+java:S1130B"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Şıÿÿÿÿ

@@ -1,5 +1,26 @@
 # CodeSquad_Study
-코드스쿼드 방과 후 스터디
-아자아자
 
-동기입니다 pr 연습입니다 리드미에 뭐라도 한 번 써볼게용 아자아자
+코드스쿼드 코코아 새벽반
+<br/><br/>
+
+|no|  멤버 |내용|
+|:---:|:---:|:-------------------------------:|
+|1| Donggi |&nbsp; [링크](https://github.com/donggi-lee-bit) |   
+|2| Jun |&nbsp; [링크](https://github.com/devjun10) |
+|3| Nohri |&nbsp; [링크](https://github.com/nohriter)|
+|4| Po |&nbsp; [링크](https://github.com/NB993)|
+|5| Hoo |&nbsp; [링크](https://github.com/who-hoo)|
+
+** 알파벳 순
+
+<br/><br/><br/>
+
+# Topic
+
+|  no |   주제  | 링크   ||
+|:---:|:------|:-------|----|
+|  1  | &nbsp; Buffer, Input / Output | ||   
+|  2  | &nbsp; Process, Thread | |   |
+|  3  | &nbsp; 예외처리 | |   |
+|  4  | &nbsp; 인터페이스 | |   |
+|  5  | &nbsp; HangMan |  |   |
