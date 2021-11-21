@@ -29,27 +29,53 @@ lock을 걸거나 해지할 때 long 타입의 정수값을 사용하며, 읽기
 풀릴 때까지 기다려야하는데 비해 `낙관적 읽기 lock` 은 쓰기 lock에 의해 바로 풀린다. 그래서 낙관적 읽기에 실패하면 읽기 lock을 얻어서 다시 읽어 와야 한다. 무조건 읽기 lock을 걸지 않고 쓰기와
 읽기가 충돌할 때만 쓰기가 끝난 후 읽기 lock을 거는 것이다.
 
-````java
-int getBalance(){
-	long stamp = lock.tryOptimisticRead(); // 낙관적 읽기 lock을 건다.
-
-	int curBalance = this.balance; // 공유 데이터인 balance를 읽어온다.
-	
-	if(!lock.validate(stamp)){ // 쓰기 lock에 의해 낙관적 읽기 lock이 풀렸는지 확인
-		stamp = lock.readLock(); // lock이 풀렸으면, 읽기 lock을 얻으려고 기다린다.
-
-		try{
-			curBalance = this.balance; // 공유 데이터를 다시 읽어온다.
-		}finally{
-			lock.unlockRead(stamp); // 읽기 lock을 푼다.
-		}
-	}
-	return curBalance; // 낙관적 읽기 lock이 풀리지 않았으면 곧바로 읽어온 값을 반환
-}
-
-````
 <br/><br/><br/>
 
+## 1-4. ReentrantLock과 Condition. (feat. 요리사와 손님)
+
+wait() & notify()로 쓰레드의 종류를 구분하지 않고, 공유 객체의 waiting pool에 같이 몰아넣는 대신, 손님 쓰레드를 위한 Condition과 요리사 쓰레드를 위한 Condition을 만들어서
+각각의 waiting pool에서 따로 기다리도록 하면 문제는 해결된다. Condition은 이미 생성된 lock으로부터 newCondition()을 호출해서 생성한다.
+
+````java
+    private Condition forCook = lock.newCondition();
+    private Condition forCust = lock.newCondition();
+````
+
+위의 코드에서 두 개의 Condition을 생성했는데, 하나는 요리사 쓰레드를 위한 것이고 다른 하나는 손님 쓰레드를 위한 것이다. 그 다음엔, wait() & notify()대신 Condition의 await()
+& signal()을 사용하면 그걸로 끝이다.
+
+|번호|Object|Condition|
+|:---:|:---:|:---|
+|1|&nbsp;void wait( )|&nbsp;void await( )|
+|2|&nbsp;RecursiveTask|&nbsp;boolean await(long time, TimeUnit unit)|
+| |&nbsp;|&nbsp;boolean long awaitNanos(long nanosTimeout)|
+| |&nbsp;|&nbsp;boolean awaitUntil(Date deadline)|
+|3|&nbsp; notify( )|&nbsp;void signal()|
+|4|&nbsp; void notifyAll( )|&nbsp;void signalAll()|
+
+<br/><br/><br/>
+
+````java
+int getBalance(){
+        long stamp=lock.tryOptimisticRead(); // 낙관적 읽기 lock을 건다.
+
+        int curBalance=this.balance; // 공유 데이터인 balance를 읽어온다.
+
+        if(!lock.validate(stamp)){ // 쓰기 lock에 의해 낙관적 읽기 lock이 풀렸는지 확인
+        stamp=lock.readLock(); // lock이 풀렸으면, 읽기 lock을 얻으려고 기다린다.
+
+        try{
+        curBalance=this.balance; // 공유 데이터를 다시 읽어온다.
+        }finally{
+        lock.unlockRead(stamp); // 읽기 lock을 푼다.
+        }
+        }
+        return curBalance; // 낙관적 읽기 lock이 풀리지 않았으면 곧바로 읽어온 값을 반환
+        }
+
+````
+
+<br/><br/><br/>
 
 # 2. fork & join
 
