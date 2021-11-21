@@ -64,3 +64,19 @@ class ThreadEx1_2 implements Runnable {
   }
 }
 ```
+
+## 스레드 이름 변경
+```java
+public class ThreadA extends Thread {
+    public ThreadA() {
+        setName("ThreadA"); // setName을 이용하여 스레드 이름 변경
+    }
+    
+    @Override
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println(getName() + "가 출력한 내용");
+        }
+    }
+}
+```
