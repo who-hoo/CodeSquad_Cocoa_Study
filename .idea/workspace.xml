@@ -2,7 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7db495c6-b2c0-45b6-b935-b6dc9980f5ae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/content/interface/read.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/interface/read.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/interface/jun/interface/.idea/sonarlint/issuestore/4/6/46ad94bdf83c8caacc56db46f7ad43850ef47c5f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/interface/jun/interface/.idea/sonarlint/issuestore/e/f/efe0c6b1c34ffb15626e7a54ffb6320627045865" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/interface/jun/interface/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/ForkJoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/Lock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/ThreadWaitEx1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/ThreadWaitExample04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/_volatile/VolatileExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/frokjuoin/ForkJoinExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/frokjuoin/SumTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/thread/jun/src/main/java/com/example/thread/frokjuoin/example01/MyRecursiveAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interface/jun/interface/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/content/interface/jun/interface/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interface/jun/interface/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/content/interface/jun/interface/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/thread/jun/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/thread/jun/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +78,10 @@
       <workItem from="1637170895584" duration="3402000" />
       <workItem from="1637346054959" duration="504000" />
       <workItem from="1637382816442" duration="4967000" />
+      <workItem from="1637395612436" duration="292000" />
+      <workItem from="1637396780410" duration="340000" />
+      <workItem from="1637397349179" duration="200000" />
+      <workItem from="1637446398968" duration="3567000" />
     </task>
     <servers />
   </component>
