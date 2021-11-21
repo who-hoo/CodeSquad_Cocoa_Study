@@ -81,6 +81,8 @@ class ThreadEx1_2 implements Runnable {
 }
 ```
 
+Runnable 인터페이스는 Thread를 상속받은 클래스처럼 start() 메소드가 없다. 따라서 별도의 쓰레드를 생성 해주고 구현한 Runnable 인터페이스를 인자로 넘겨주어야 합니다.
+
 ### 스레드 이름 변경
 ```java
 public class ThreadA extends Thread {
