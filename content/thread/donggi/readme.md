@@ -98,7 +98,7 @@ public class ThreadA extends Thread {
     }
 }
 ```
-### 스레드의 실행 - start()
+### 스레드의 실행 - start() (start() 와 Run())
 start() 호출 시 스레드가 실행된다
 ```java
 ThreadA.start();
@@ -107,4 +107,14 @@ ThreadA.start();
 - 한 번 실행이 종료된 스레드는 다시 실행할 수 없다. 하나의 스레드에 start()는 한 번만 호출될 수 있다. 중복 호출 시 IllegalThreadStateException 에러 발생
 - 다시 실행하고 싶다면 새로운 스레드 생성 후 start() 호출
 
+### run()
 
+- 스레드의 run() 메서드는 우리가 사용하는 main() 메서드와 같은 역할을 한다고 볼 수 있다. 스레드를 시작하면 run() 메서드 부터 시작하여 실행하기 때문이다.
+- 스레드를 시작할 때에는 구현한 run() 메서드로 시작하는게 아닌, start()메서드로 시작해야 정상적으로 실행시킬 수 있다.
+- 만약 스레드를 run() 메서드를 통해 실행시킨다면, 스레드는 main 메소드 위쪽에 스택으로 쌓이게 되며, 병행 처리를 하지 못하게 된다.
+
+<img width="287" alt="스크린샷 2021-11-21 오후 5 31 40" src="https://user-images.githubusercontent.com/73376468/142755234-8beba426-8da3-4c9b-acbf-5c16e36dbed8.png">
+
+<img width="276" alt="스크린샷 2021-11-21 오후 5 33 04" src="https://user-images.githubusercontent.com/73376468/142755275-0d66e127-d097-4939-a96b-397d8dbd575f.png">
+
+- start() 메소드로 실행시키면 스레드가 순차적으로 실행되는게 아닌 병행 실행이 되기 때문에, 스레드의 실행이 일관적으로 나타나지 않는 것을 확인할 수 있다.
