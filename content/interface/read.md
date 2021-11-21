@@ -101,7 +101,7 @@ List의 구현체는 ArrayList와 LinkedList 뿐만 아니라 다 알기 힘들 
 이를 List예제에 적용해보면 저수준의 Stack이 고수준 List에 의존하고 있기 때문에 Stack을 List로 바꾸어도 아무런 오류가 발생하지 않습니다.
 <br/><br/>
 ![ex_screenshot](../images/dependency-01.png)
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ## 3. 단점
 
@@ -135,33 +135,5 @@ List의 구현체는 ArrayList와 LinkedList 뿐만 아니라 다 알기 힘들 
 `# Director Super # 당장 결정하지않은 경우` `# 인터페이스는 특별한 형태의 추상 클래스` `# 인터페이스도 추상 객체다.`
 `# eatable과 같이 동작의 상태를 결정하는 용어`  `# 동적 할당`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
