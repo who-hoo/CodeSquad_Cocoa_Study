@@ -1,4 +1,4 @@
-package com.example.thread.frokjuoin;
+package com.example.thread.frokjuoin.example02;
 
 import java.util.concurrent.ForkJoinPool;
 
@@ -9,10 +9,8 @@ public class ForkJoinExample {
     static final ForkJoinPool pool = new ForkJoinPool();
 
     public static void main(String[] args) throws Exception {
-        System.out.println(ForkJoinPool.commonPool().getAsyncMode());
         long from = 1L;
         long to = 1000_000L;
-//        long to = 100_000_000L;
 
         SumTask task = new SumTask(from, to);
 
@@ -30,13 +28,13 @@ public class ForkJoinExample {
 
         result = 0L;
         start = System.currentTimeMillis();
+
         for (long i = from; i <= to; i++)
             result += i;
 
-        System.out.println("Elapsed time= " + (System.currentTimeMillis() - start));
+        long end = System.currentTimeMillis();
+        System.out.println("Elapsed time= " + (end - start));
         System.out.printf("sum of %d~%d=%d%n", from, to, result);
-
-
     }
 
 }
