@@ -115,6 +115,6 @@ ThreadA.start();
 
 <img width="287" alt="스크린샷 2021-11-21 오후 5 31 40" src="https://user-images.githubusercontent.com/73376468/142755234-8beba426-8da3-4c9b-acbf-5c16e36dbed8.png">
 
-<img width="276" alt="스크린샷 2021-11-21 오후 5 33 04" src="https://user-images.githubusercontent.com/73376468/142755275-0d66e127-d097-4939-a96b-397d8dbd575f.png">
-
 - start() 메소드로 실행시키면 스레드가 순차적으로 실행되는게 아닌 병행 실행이 되기 때문에, 스레드의 실행이 일관적으로 나타나지 않는 것을 확인할 수 있다.
+
+<img width="276" alt="스크린샷 2021-11-21 오후 5 33 04" src="https://user-images.githubusercontent.com/73376468/142755275-0d66e127-d097-4939-a96b-397d8dbd575f.png">
