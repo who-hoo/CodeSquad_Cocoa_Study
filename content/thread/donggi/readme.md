@@ -65,7 +65,7 @@ class ThreadEx1_2 implements Runnable {
 }
 ```
 
-## 스레드 이름 변경
+### 스레드 이름 변경
 ```java
 public class ThreadA extends Thread {
     public ThreadA() {
@@ -80,3 +80,13 @@ public class ThreadA extends Thread {
     }
 }
 ```
+### 스레드의 실행 - start()
+start() 호출 시 스레드가 실행된다
+```java
+ThreadA.start();
+```
+- start() 호출 시 바로 실행되는 것이 아니라, 실행 대기 상태로 있다가 자신의 차례가 되면 실행된다. 실행 대기중인 스레드가 없으면 바로 실행된다.
+- 한 번 실행이 종료된 스레드는 다시 실행할 수 없다. 하나의 스레드에 start()는 한 번만 호출될 수 있다. 중복 호출 시 IllegalThreadStateException 에러 발생
+- 다시 실행하고 싶다면 새로운 스레드 생성 후 start() 호출
+
+
