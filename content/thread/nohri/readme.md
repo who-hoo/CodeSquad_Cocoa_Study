@@ -14,6 +14,7 @@
 ![이미지](./images/0010.jpg)
 
 #### 싱글쓰레드
+
 ```java
 public class SingleThread {
     public static void main(String[] args) {
@@ -32,9 +33,9 @@ public class SingleThread {
         System.out.println("소요시간2:"+(System.currentTimeMillis() - startTime));
     }
 }
-
 ```
 #### 멀티쓰레드
+
 ```java
 public class MultiThread {
     static long startTime = 0;
@@ -69,6 +70,7 @@ class MultiThread_1 extends Thread {
 ![이미지](./images/0014.jpg)
 
 #### 싱글스레드 사용자 입력
+
 ```java
 public class SingleThreadIO {
     public static void main(String[] args) throws Exception {
@@ -87,6 +89,7 @@ public class SingleThreadIO {
 ```
 
 #### 멀티스레드 사용자 입력
+
 ```java
 public class MultiThreadIO {
     public static void main(String[] args) throws Exception 	{
@@ -116,6 +119,7 @@ class MultiThreadIO_1 extends Thread {
 ![이미지](./images/0018.jpg)
 
 #### 쓰레드 우선순위
+
 ```java
 public class Priority {
     public static void main(String args[]) {
@@ -148,3 +152,93 @@ class Priority_2 extends Thread {
 }
 ```
 
+![이미지](./images/0019.jpg)
+![이미지](./images/0020.jpg)
+
+#### 쓰레드 그룹
+
+```java
+public class Group {
+    public static void main(String args[]) throws Exception {
+        ThreadGroup main = Thread.currentThread().getThreadGroup();
+        ThreadGroup grp1 = new ThreadGroup("Group1");
+        ThreadGroup grp2 = new ThreadGroup("Group2");
+
+        // ThreadGroup(ThreadGroup parent, String name)
+        ThreadGroup subGrp1 = new ThreadGroup(grp1,"SubGroup1");
+
+        grp1.setMaxPriority(3);	// 쓰레드 그룹 grp1의 최대우선순위를 3으로 변경.
+
+        Runnable r = new Runnable() {
+            public void run() {
+                try {
+                    Thread.sleep(1000); // 쓰레드를 1초간 멈추게 한다.
+                } catch(InterruptedException e) {}
+            }
+        };
+
+        // Thread(ThreadGroup tg, Runnable r, String name)
+        Thread th1 = new Thread(grp1,     r, "th1");
+        Thread th2 = new Thread(subGrp1,  r, "th2");
+        Thread th3 = new Thread(grp2,     r, "th3");
+
+        th1.start();
+        th2.start();
+        th3.start();
+
+        System.out.println(">>List of ThreadGroup : "+ main.getName()
+                +", Active ThreadGroup: " + main.activeGroupCount()
+                +", Active Thread: "      + main.activeCount());
+        main.list();
+    }
+}
+```
+
+![이미지](./images/0021.jpg)
+![이미지](./images/0022.jpg)
+
+#### 데몬 쓰레드
+
+```java
+public class Daemon implements Runnable {
+    static boolean autoSave = false;
+
+    public static void main(String[] args) {
+        Thread t = new Thread(new Daemon());
+        t.setDaemon(true);        // 이 부분이 없으면 종료되지 않는다.
+        t.start();
+
+        for (int i = 1; i <= 10; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.getMessage();
+            }
+            System.out.println(i);
+
+            if (i == 5)
+                autoSave = true;
+        }
+
+        System.out.println("프로그램을 종료합니다.");
+    }
+
+    public void run() {
+        while (true) {
+            try {
+                Thread.sleep(3 * 1000);    // 3초마다
+            } catch (InterruptedException e) {
+            }
+
+            // autoSave의 값이 true 이면 autoSave()를 호출한다.
+            if (autoSave) {
+                autoSave();
+            }
+        }
+    }
+
+    public void autoSave() {
+        System.out.println("작업파일이 자동 저장되었습니다.");
+    }
+}
+```
