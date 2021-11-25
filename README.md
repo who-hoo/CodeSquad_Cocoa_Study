@@ -10,6 +10,7 @@
 |3| Hoo |&nbsp; [링크](https://github.com/who-hoo)|
 |4| Nohri |&nbsp; [링크](https://github.com/nohriter)|
 |5| Po |&nbsp; [링크](https://github.com/NB993)|
+|6| 제리 |&nbsp; [링크](https://github.com/jeremy0405)|
 
 ** 알파벳 순
 
