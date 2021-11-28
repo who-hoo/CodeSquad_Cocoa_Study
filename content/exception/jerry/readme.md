@@ -2,18 +2,24 @@
 
 [Lesson: Exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html)
 
+
 try-catch 및 자동 자원 반환. try catch 원리 및 내부 처리.
+
+
 try-catch는 printStackTrace, getMessage 정의 및 어떻게 구현하는지도 찾기
 
 ## 예외란?
 
 프로그램 실행 중에 프로그램의 흐름을 방해하는 일(event)
 
+
 예외 → 런타임 예외 & Exception
 
 런타임 예외 : 예외 컨트롤 필요 없음. / unchecked exception
 
 Exception : 예외 컨트롤 필수 / checked exception
+
+
 
 예외가 발생하면 에러가 발생한 메소드에서 에러 객체를 생성(new Exception())하여 런타임 시스템에 전달(Thorw)하게 됨.
 
@@ -42,7 +48,8 @@ try {
 } catch (Exception2 e2) {
 	// try block에서 Exception2 가 발생 시 처리할 코드
 } finally {
-	// 에러가 발생해도 무조건 실행되어야 하는 코드 (try or catch 코드가 실행중일 때 JVM이 종료되면 실행안될수도)
+	// 에러가 발생해도 무조건 실행되어야 하는 코드
+	//(try or catch 코드가 실행중일 때 JVM이 종료되면 실행안될수도)
 	// 무조건 try block에서 exit 할 때 실행됨
 	// try block -> finally block -> catch block 순으로 실행
 }
@@ -117,12 +124,18 @@ class TestClose implements Closeable {
 }
 ```
 
+
+
+
+
+
 ```java
 프로그램 시작
 프로그램 종료
 Close가 호출됨
 메인문 종료
 ```
+___
 
 ```java
 import java.io.Closeable;
@@ -161,12 +174,20 @@ class TestClose implements Closeable {
 }
 ```
 
+
+
+
+
+
+
 ```java
 프로그램 시작
 Close가 호출됨
 에러다!
 메인문 종료
 ```
+
+___
 
 ```java
 import java.io.Closeable;
@@ -204,6 +225,12 @@ class TestClose implements Closeable {
     }
 }
 ```
+
+
+
+
+
+
 
 ```java
 프로그램 시작
