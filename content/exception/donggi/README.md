@@ -55,3 +55,26 @@
   - 코드를 잘못 짠 경우
   - 흐름보다는 기본적인 부분의 에러.
   - 컴파일 하는데 문제는 없지만 실행하면 문제가 발생함.
+### 검사 예외의 종류
+- ClassNotFoundException
+  - 존재하지 않는 클래스를 사용하려고 할 때 발생한다.
+- InterruptedException 
+  - 인터럽트 되었을 때 발생한다.
+- NoSuchFieldException	
+  - 클래스가 명시한 필드를 포함하지 않을 때 발생한다.
+- NoSuchMethodException	
+  - 클래스가 명시한 메서드를 포함하지 않을 때 발생한다.
+- IOException
+  - 데이터 읽기 같은 입출력 문제가 있을 때 발생한다.
+
+### 비검사 예외의 종류
+- NullPointerException
+  - 객체 참조가 없는 상태, 즉 null 값을 갖는 참조 변수로 객체 접근 연산자인 도트(.)를 사용했을 때 발생한다. 객체가 없는 상태에서 객체를 사용하려 했으니 예외가 발생하는 것이다.
+- ArrayIndexOutOfBoundsException
+  - 배열에서 인덱스 범위를 초과하여 사용할 경우인 에러이다.
+- ArithmeticException
+  - 산술연산 에러이고  0으로 나눌 때 에러가 발생한다.
+
+
+출처 : [deftkang의 IT 블로그](https://deftkang.tistory.com/44)   
+      [미니 블로그](https://otrodevym.tistory.com/entry/Java-%EA%B2%80%EC%82%AC-%EC%98%88%EC%99%B8Checked-%EC%99%80-%EB%B9%84%EA%B2%80%EC%82%AC-%EC%98%88%EC%99%B8UnChecked#:~:text=Java%EC%9D%98%20%EC%98%88%EC%99%B8%20%EC%B2%98%EB%A6%AC%EB%8A%94,%EC%9D%98%20%EB%B9%84%EA%B2%80%EC%82%AC%20%EC%98%88%EC%99%B8%EC%9D%B4%EB%8B%A4.)
