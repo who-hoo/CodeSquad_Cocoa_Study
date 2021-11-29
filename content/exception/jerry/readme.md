@@ -76,10 +76,11 @@ catch (IOException | SQLException ex) {
 
 파일을 닫거나 자원을 복구하는 코드를 finally block에 넣어서 resouce leak를 방지할 수 있음.
 
-`Closeable` 을 가지고 있는 클래스들에 적용 가능
+`AutoCloseable` 을 가지고 있는 클래스들에 적용 가능
 
 ```java
-try(){
+try(Scanner sc = new Scanner(System.in);
+    FileOutputStream fileOutputStream = new FileOutputStream("test.txt")){
 
 } catch (Exception e) {
 
