@@ -7,9 +7,10 @@
 |:---:|:---:|:-------------------------------:|
 |1| Donggi |&nbsp; [링크](https://github.com/donggi-lee-bit) |   
 |2| Jun |&nbsp; [링크](https://github.com/devjun10) |
-|3| Nohri |&nbsp; [링크](https://github.com/nohriter)|
-|4| Po |&nbsp; [링크](https://github.com/NB993)|
-|5| Hoo |&nbsp; [링크](https://github.com/who-hoo)|
+|3| Hoo |&nbsp; [링크](https://github.com/who-hoo)|
+|4| Nohri |&nbsp; [링크](https://github.com/nohriter)|
+|5| Po |&nbsp; [링크](https://github.com/NB993)|
+|6| 제리 |&nbsp; [링크](https://github.com/jeremy0405)|
 
 ** 알파벳 순
 
