@@ -305,19 +305,19 @@ public class ReThrowing {
 
   ```java
   void install() throws InstallException {
-  try {
-    startInstall();
-    copyFiles();
-  } catch (Exception1 e) {
-    throw new RuntimeException(new Exception1)
-  } catch (Exception2 e) {
-    throw new RuntimeException(new Exception2)
-  } catch (Exception3 e) {
-    throw new RuntimeException(new Exception3)
-  } catch (Exception4 e) {
-    throw new RuntimeException(new Exception4)
-  } catch (Exception5 e) {
-    throw new RuntimeException(new Exception5)
-  }
+    try {
+      startInstall();
+      copyFiles();
+    } catch (Exception1 e) {
+      throw new RuntimeException(new Exception1)
+    } catch (Exception2 e) {
+      throw new RuntimeException(new Exception2)
+    } catch (Exception3 e) {
+      throw new RuntimeException(new Exception3)
+    } catch (Exception4 e) {
+      throw new RuntimeException(new Exception4)
+    } catch (Exception5 e) {
+      throw new RuntimeException(new Exception5)
+    }
   }
   ```
