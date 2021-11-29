@@ -74,7 +74,6 @@
   - 배열에서 인덱스 범위를 초과하여 사용할 경우인 에러이다.
 - ArithmeticException
   - 산술연산 에러이고  0으로 나눌 때 에러가 발생한다.
-
-
+  
 출처 : [deftkang의 IT 블로그](https://deftkang.tistory.com/44)   
       [미니 블로그](https://otrodevym.tistory.com/entry/Java-%EA%B2%80%EC%82%AC-%EC%98%88%EC%99%B8Checked-%EC%99%80-%EB%B9%84%EA%B2%80%EC%82%AC-%EC%98%88%EC%99%B8UnChecked#:~:text=Java%EC%9D%98%20%EC%98%88%EC%99%B8%20%EC%B2%98%EB%A6%AC%EB%8A%94,%EC%9D%98%20%EB%B9%84%EA%B2%80%EC%82%AC%20%EC%98%88%EC%99%B8%EC%9D%B4%EB%8B%A4.)
