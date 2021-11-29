@@ -14,7 +14,7 @@ try-catch는 printStackTrace, getMessage 정의 및 어떻게 구현하는지도
 
 프로그램 실행 중에 프로그램의 흐름을 방해하는 일(event)
 
-
+<br>
 
 예외 → 런타임 예외 & Exception
 
@@ -22,7 +22,7 @@ try-catch는 printStackTrace, getMessage 정의 및 어떻게 구현하는지도
 
 Exception : 예외 컨트롤 필수 / checked exception
 
-
+<br>
 
 
 예외가 발생하면 에러가 발생한 메소드에서 에러 객체를 생성(new Exception())하여 런타임 시스템에 전달(Thorw)하게 됨.
@@ -90,6 +90,9 @@ try(){
     - try블럭에서 예외가 발생했을 때 바로
     - close() 호출 이후 catch 블럭으로 넘어감.
 
+<br>
+<br>
+
 Example
 
 ```java
@@ -128,7 +131,9 @@ class TestClose implements Closeable {
 }
 ```
 
-
+<br>
+<br>
+<br>
 
 
 
@@ -233,7 +238,9 @@ class TestClose implements Closeable {
 ```
 
 
-
+<br>
+<br>
+<br>
 
 
 
@@ -244,6 +251,7 @@ Close가 호출됨
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 2
 	at ExceptionTest.main(ExceptionTest.java:10)
 ```
+<br>
 
 ## try-catch 에서 printStackTrace(), getMessage()
 
@@ -262,4 +270,6 @@ String getMessage()
 ```
 
 try 문에서 오류가 발생하면 예외 객체가 생성된다.
+
+
 이후 catch문에서 예외 객체를 핸들링하게 되는데 이 때 printStackTrace() 또는 getMessage()를 사용하게 되면 예외 객체에 구현되어 있는 printStackTrace() 메서드와 getMessage() 메서드가 호출되게 된다.
