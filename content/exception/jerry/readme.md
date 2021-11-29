@@ -3,7 +3,9 @@
 [Lesson: Exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html)
 
 
+
 try-catch 및 자동 자원 반환. try catch 원리 및 내부 처리.
+
 
 
 try-catch는 printStackTrace, getMessage 정의 및 어떻게 구현하는지도 찾기
@@ -13,11 +15,13 @@ try-catch는 printStackTrace, getMessage 정의 및 어떻게 구현하는지도
 프로그램 실행 중에 프로그램의 흐름을 방해하는 일(event)
 
 
+
 예외 → 런타임 예외 & Exception
 
 런타임 예외 : 예외 컨트롤 필요 없음. / unchecked exception
 
 Exception : 예외 컨트롤 필수 / checked exception
+
 
 
 
@@ -174,7 +178,9 @@ class TestClose implements Closeable {
 }
 ```
 
-
+<br>
+<br>
+<br>
 
 
 
@@ -244,10 +250,10 @@ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out
 ```java
 Class Throwable {
 
-void	printStackTrace()
+void printStackTrace()
 // Prints this throwable and its backtrace to the standard error stream
 
-String	getMessage()
+String getMessage()
 // Returns the detail message string of this throwable.
 
 }
@@ -255,4 +261,5 @@ String	getMessage()
 // 모든 에러, 예외는 Throwable의 자식이다.
 ```
 
-try 문에서 오류가 발생하면 예외 객체가 생성된다. 이후 catch문에서 예외 객체를 핸들링하게 되는데 이 때 printStackTrace() 또는 getMessage()를 사용하게 되면 예외 객체에 구현되어 있는 printStackTrace() 메서드와 getMessage() 메서드가 호출되게 된다.
+try 문에서 오류가 발생하면 예외 객체가 생성된다.
+이후 catch문에서 예외 객체를 핸들링하게 되는데 이 때 printStackTrace() 또는 getMessage()를 사용하게 되면 예외 객체에 구현되어 있는 printStackTrace() 메서드와 getMessage() 메서드가 호출되게 된다.
