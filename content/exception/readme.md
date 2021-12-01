@@ -36,6 +36,7 @@ Throwable Class에는 printStaceTrace(), getStackTrace(), getMessage() 등의 �
 
 
 **에러** : 프로그램 코드에 의해 수습될 수 없는 심각한 오류
+
 **예외** : 프로그램 코드에 의해 수습 가능한 다소 미약한 오류
 
 
@@ -56,11 +57,13 @@ Throwable Class에는 printStaceTrace(), getStackTrace(), getMessage() 등의 �
 예외 처리기를 찾지 못하면 런타임 시스템은 종료됨.
 ![https://docs.oracle.com/javase/tutorial/figures/essential/exceptions-errorOccurs.gif](https://docs.oracle.com/javase/tutorial/figures/essential/exceptions-errorOccurs.gif)
 
- 
+<br> 
+
 #### Exception (Checked Exception)
 Checked Exception으로 예외처리를 해주지 않으면 컴파일 에러가 발생한다.
 사용자의 실수와 같은 외적인 요인에 의해 발생될 수 있는 예외인 경우가 많다.
 
+<br>
 
 #### RuntimeException (Unchecked Exception)
 Unchecked Exception으로 프로그래머가 예외처리를 하지 않아도 컴파일 에러가 발생하지 않는다. 주로 프로그래머의 실수에 의해서 발생될 수 있는 예외인 경우가 많다.
@@ -77,6 +80,8 @@ Unchecked Exception으로 프로그래머가 예외처리를 하지 않아도 �
 |예외 발생시 트랜잭션 처리	| Roll-back 안함	| Roll-back|
 |대표적인 클래스|IOException, SQLException| NullPointerException, IndexOutOfBoundException|||
 
+
+<br>
 
 ## 예외처리 방법
 
