@@ -37,6 +37,8 @@ Throwable Class에는 printStaceTrace(), getStackTrace(), getMessage() 등의 �
 
 
 **에러** : 프로그램 코드에 의해 수습될 수 없는 심각한 오류
+
+
 **예외** : 프로그램 코드에 의해 수습 가능한 다소 미약한 오류
 
 
@@ -181,11 +183,17 @@ if (num > 20) {
 	throw new Exception("숫자가 20보다 큽니다");
 }
 ```
+
 - 예외 클래스 생성자에 `String`을 넣어주면 예외 인스턴스에 `String`값이 메시지로 저장된다.
+
 ![](./img/exceptionConstructor.png)
+
+
 - 저장된 메시지는 `getMessage()`를 이용해서 얻어올 수 있다.
+
 ![](./img/exceptionGetMessage.png)
 
+<br>
 
 ### 예외 던지기(throws CheckedException) // 예외 떠넘기기 // 책임 전가
 메서드를 호출한 쪽으로 예외를 전달해 예외처리를 떠맡기는 방법.
