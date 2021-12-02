@@ -430,7 +430,7 @@ public class ReThrowing {
   ```
 
 ### 예외 전환(감싸기)
-`Checked` 예외를 `Unchecked` 예외로 변경하기 위해서 예외 전환을 사용한다.
+`Checked` 예외를 `Unchecked` 예외로 변경하기 위해서 예외 전환을 사용합니다.
 
   자바가 처음 개발되던 때와 환경이 많이 바뀌면서, 필수로 예외를 처리해야하는 `checked` 예외가 의미 없어지는 상황이 생기기 시작하였습니다.
 
@@ -457,15 +457,15 @@ public class ReThrowing {
 
 
 
-
-
-
-
 ### 커스텀 예외 (사용자 예외)
 자바에서 제공하는 표준 예외 클래스 이외에 프로그래머가 직접 예외 클래스를 만들어 예외 상황을 처리할 수 있다. 이를 커스텀 예외(사용자 예외)라고 한다.
 
 #### 만드는 방법
 만들기 전에 Checked Exception으로 할 것인가 Unchecked Exception으로 할 것인지 결정해야 한다.
+
+
+Unchecked Exception 예제)
+
 ```java
 public class ExampleException extends RuntimeException {
 	public ExampleException() {
