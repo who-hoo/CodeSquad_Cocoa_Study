@@ -36,7 +36,6 @@ Throwable Class에는 printStaceTrace(), getStackTrace(), getMessage() 등의 �
 
 
 **에러** : 프로그램 코드에 의해 수습될 수 없는 심각한 오류
-
 **예외** : 프로그램 코드에 의해 수습 가능한 다소 미약한 오류
 
 
@@ -57,13 +56,11 @@ Throwable Class에는 printStaceTrace(), getStackTrace(), getMessage() 등의 �
 예외 처리기를 찾지 못하면 런타임 시스템은 종료됨.
 ![https://docs.oracle.com/javase/tutorial/figures/essential/exceptions-errorOccurs.gif](https://docs.oracle.com/javase/tutorial/figures/essential/exceptions-errorOccurs.gif)
 
-<br> 
-
+ 
 #### Exception (Checked Exception)
 Checked Exception으로 예외처리를 해주지 않으면 컴파일 에러가 발생한다.
 사용자의 실수와 같은 외적인 요인에 의해 발생될 수 있는 예외인 경우가 많다.
 
-<br>
 
 #### RuntimeException (Unchecked Exception)
 Unchecked Exception으로 프로그래머가 예외처리를 하지 않아도 컴파일 에러가 발생하지 않는다. 주로 프로그래머의 실수에 의해서 발생될 수 있는 예외인 경우가 많다.
@@ -80,8 +77,6 @@ Unchecked Exception으로 프로그래머가 예외처리를 하지 않아도 �
 |예외 발생시 트랜잭션 처리	| Roll-back 안함	| Roll-back|
 |대표적인 클래스|IOException, SQLException| NullPointerException, IndexOutOfBoundException|||
 
-
-<br>
 
 ## 예외처리 방법
 
@@ -171,7 +166,23 @@ try-with-resource 문도 finally block 가능
     -   try블럭에서 예외 발생 후 적절한 예외처리기 있는지 없는지 확인 후 close() 호출 예외처리기 있으면 예외처리기 실행 없으면 쓰레드 죽음.
 
 
+
+
 ### 예외 발생시키기 ( throw new Exception("예외 받아라!"); )
+프로그래머가 예외를 발생시키는 이유 : 정보를 주기 위함.
+
+프로그래머가 의도와 달리 비정상적으로 돌아가는 코드에서 예외를 발생시켜 프로그램이 잘못 실행되고 있다고 정보를 주기 위해 사용.
+
+숫자가 20보다 크기를 원치 않을 경우 예외를 발생시켜 핸들할 수 있음.
+```java
+if (num > 20) {
+	throw new Exception("숫자가 20보다 큽니다");
+}
+```
+- 예외 클래스 생성자에 `String`을 넣어주면 예외 인스턴스에 `String`값이 메시지로 저장된다.
+![](./img/exceptionConstructor.png)
+- 저장된 메시지는 `getMessage()`를 이용해서 얻어올 수 있다.
+![](./img/exceptionGetMessage.png)
 
 
 ### 예외 던지기(throws CheckedException) // 예외 떠넘기기 // 책임 전가
@@ -179,9 +190,86 @@ try-with-resource 문도 finally block 가능
 
 
 
+
+
 ### 예외 전환(감싸기)
+`Checked` 예외를 `Unchecked` 예외로 변경하기 위해서 예외 전환을 사용한다.
+
+  자바가 처음 개발되던 때와 환경이 많이 바뀌면서, 필수로 예외를 처리해야하는 `checked` 예외가 의미 없어지는 상황이 생기기 시작하였습니다.
+
+  이런 경우에 의미없는 `try-catch`문을 추가하는 대신에 `unchecked` 예외인 `RuntimeException`의 원인 예외로 등록하여 감싸는 방법으로 `unchecked` 예외로 변경하여  예외처리를 하지 않을 수 있습니다.
+
+```java
+  void install() throws InstallException {
+    try {
+      startInstall();
+      copyFiles();
+    } catch (Exception1 e) {
+      throw new RuntimeException(new Exception1)
+    } catch (Exception2 e) {
+      throw new RuntimeException(new Exception2)
+    } catch (Exception3 e) {
+      throw new RuntimeException(new Exception3)
+    } catch (Exception4 e) {
+      throw new RuntimeException(new Exception4)
+    } catch (Exception5 e) {
+      throw new RuntimeException(new Exception5)
+    }
+  }
+```
 
 
 
-### 사용자 예외
+
+
+
+
+### 커스텀 예외 (사용자 예외)
+자바에서 제공하는 표준 예외 클래스 이외에 프로그래머가 직접 예외 클래스를 만들어 예외 상황을 처리할 수 있다. 이를 커스텀 예외(사용자 예외)라고 한다.
+
+#### 만드는 방법
+만들기 전에 Checked Exception으로 할 것인가 Unchecked Exception으로 할 것인지 결정해야 한다.
+```java
+public class ExampleException extends RuntimeException {
+	public ExampleException() {
+		super();
+	}
+
+	public ExampleException(String message) {
+		super(message);
+	}
+}
+```
+
+
+#### 왜 커스텀 예외를 사용할까?
+1. 예외클래스 명 만으로 정보 전달이 가능
+
+
+
+2. 상세한 예외 정보를 제공할 수 있음
+
+
+#### 커스텀 예외가 무조건 좋은 것인가?
+
+커스텀 예외의 사용에 반대하는 의견들도 많다.
+
+1. 예외 메시지로도 충분히 의미를 전달할 수 있다.  
+   1. 메시지만 예외사항에 맞게 재정의해준다면 충분히 그 의미를 파악할 수 있다.  
+  
+2. 표준 예외를 사용하면 가독성이 높아진다.  
+   1. 우리는 이미 익숙하고, 쓰임에 대해 잘 알고있는 예외들이 많다.
+   2. 낯선 예외를 만났을 땐, 그 커스텀 익셉션을 파악하는 작업이 따라온다. 이 또한 비용이 될 수 있다.
+
+3. 일일히 예외 클래스를 만들다보면 지나치게 커스텀 예외가 많아질 수 있다.
+   1. 예외 클래스들을 하나하나 만들다보면 지나치게 많아질 수 있다. 이 디렉토리와 클래스를 관리하는 것 역시 일이다.
+
+Effective Java에서도 아래와 같은 이유로 표준 예외 사용을 권장하고 있다.
+
+1. 배우기 쉽고 사용하기 편리한 API를 만들 수 있다.
+2. 표준 예외를 사용한 API는 가독성이 높다.
+3. 예외도 재사용하는 것이 좋다. 예외 클래스의 수가 적을수록 프로그램의 메모리 사용량이 줄고, 클래스를 적재 시간도 줄어든다.
+
+
+
 
